@@ -1,0 +1,94 @@
+@mixin heading-shadow($colour:lightness-shift($colour-primary), $offset: $heading-shadow-size){
+    text-shadow: $offset $offset $colour;
+}
+
+@mixin border($colour:$colour-primary) {
+    border: .1rem solid $colour;
+}
+
+@mixin img-ratio {
+    width: 100%;
+        display: block;
+        overflow: hidden;
+        padding-top: 56.25%;
+        position: relative;
+        & img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            transform: translate(-50%, -50%);
+        }
+}
+
+@mixin btn {
+    /*padding: $grid-gutter;*/
+    width: 50%;
+    height: 22%;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-style: none;
+    color: $colour-white;
+    background: $colour-rose;
+    cursor: pointer;
+
+    &:hover{
+        background: darken($colour-rose, 10%);
+        color: $colour-accent;
+    }
+    &--full-width {
+        width: 40%;
+        margin: 0 auto;
+    }
+}
+@mixin btnmenu {
+    /*padding: $grid-gutter;*/
+    width: 96%;
+    height: 70%;
+    text-align: left;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-style: none;
+    color: $colour-black;
+    background: $colour-gray-light;
+    cursor: pointer;
+
+    &:hover{
+        background: darken($colour-menu-buttom, 1%);
+        
+    
+    }
+   
+    &--full-width {
+        width: 40%;
+        margin: 0 auto;
+    }
+}
+
+@mixin hearimg {
+    margin: 3% 10% 0 0;
+    display: block;
+    float: right;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    content:url("../images/icons/heart-outline.svg");
+    &:hover{
+        content:url("../images/icons/heart-outline2.svg");
+     /*background-image: url("../images/icons/heart-outline2.svg");*/
+    }
+   
+    &--full-width {
+        width: 40%;
+        margin: 0 auto;
+    }
+}
+
+@mixin section-divs {
+    margin: 0 0 0 $margin-divs-left;
+
+}

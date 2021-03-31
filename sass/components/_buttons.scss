@@ -1,0 +1,20 @@
+.btn {
+    @include btn
+
+}
+
+.btn_menu {
+    @include btnmenu
+
+}
+
+.icon {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+  }
+
+.icon_menu {
+    margin-left: 8%;
+  }
+ 

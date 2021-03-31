@@ -1,0 +1,21 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+button.btn::after{
+    content: 'Explore our restaurants';
+  
+}
+button.btnmenu::after{
+    content: 'Explore our restaurants';
+  
+}
+
+
+body {
+    box-sizing: border-box;
+    background: $colour-secondary;
+}
