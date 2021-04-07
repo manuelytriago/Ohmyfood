@@ -50,6 +50,7 @@ button {
     font-weight: 900;
     font-style: italic;
     font-size: 0.65rem;
+    
 }
 
 ul {
@@ -66,7 +67,12 @@ ul {
     justify-content: space-around;
 
 }
+
+
 a{
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
     margin: 0 0 0 0;
 }
 
@@ -74,10 +80,21 @@ h2{
     @include section-divs;
     color: black;
 }
+h3{
+    @include section-divs;
+    font-weight: normal;
+    color: black;
+  
+}
+
 p {
     display: inline;
 
 }
+b {
+    margin-left: 5%;
+}
+
 figure {
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
@@ -86,11 +103,13 @@ figure {
     text-align: center;
     font-style: italic;
     font-size: smaller;
+    position: relative;
+    bottom: 10%;
     text-indent: 0;
     margin: 0 0 0 0;
     width: 96%;
     height: 90%;
-  }
+}
 
   figcaption {
     border-bottom-left-radius: 20px;

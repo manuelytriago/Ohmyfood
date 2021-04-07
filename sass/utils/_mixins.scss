@@ -5,7 +5,18 @@
 @mixin border($colour:$colour-primary) {
     border: .1rem solid $colour;
 }
+@mixin small-images {
+    width: 20px;
+    height: 20px;
+}
 
+@mixin flex($content,$direction,$align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $content;
+    align-items: $align;
+    
+}
 @mixin img-ratio {
     width: 100%;
         display: block;
@@ -21,8 +32,14 @@
         }
 }
 
+@mixin new-buttom {
+        @include flex(center,row,center);
+        font-size: 10px;
+        position: relative;
+        z-index: 1;
+}
+
 @mixin btn {
-    /*padding: $grid-gutter;*/
     width: 50%;
     height: 22%;
     border-top-right-radius: 20px;
@@ -32,8 +49,6 @@
     border-style: none;
     color: $colour-white;
     background: $colour-rose;
-    cursor: pointer;
-
     &:hover{
         background: darken($colour-rose, 10%);
         color: $colour-accent;
@@ -43,25 +58,23 @@
         margin: 0 auto;
     }
 }
-@mixin btnmenu {
-    /*padding: $grid-gutter;*/
-    width: 96%;
-    height: 70%;
+
+@mixin btnmenu($colour,$height,$width) {
+    width: $width;
+    height: $height;
     text-align: left;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
     border-style: none;
     color: $colour-black;
-    background: $colour-gray-light;
-    cursor: pointer;
-
-    &:hover{
+    background: $colour;
+    /*&:hover{
         background: darken($colour-menu-buttom, 1%);
         
     
-    }
+    }*/
    
     &--full-width {
         width: 40%;
@@ -69,17 +82,16 @@
     }
 }
 
+
+
 @mixin hearimg {
     margin: 3% 10% 0 0;
     display: block;
     float: right;
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
+    @include small-images();
     content:url("../images/icons/heart-outline.svg");
     &:hover{
         content:url("../images/icons/heart-outline2.svg");
-     /*background-image: url("../images/icons/heart-outline2.svg");*/
     }
    
     &--full-width {
