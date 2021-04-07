@@ -1,2 +1,2 @@
 # Ohmyfood
-Project 3 OpenClassrooms
+https://manuelytriago.github.io/Ohmyfood/

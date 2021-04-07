@@ -2,11 +2,108 @@
     @include btn
 
 }
-
-.btn_menu {
-    @include btnmenu
+.btn2 {
+  @include btn
 
 }
+
+.btn_menu {
+    @include btnmenu($colour-gray-light,70%,96%);
+
+}
+
+
+
+.btn_menu2 {
+  @include btnmenu($colour-white,100%,100%);
+  display: flex;
+  flex-wrap: wrap;
+  &:hover +.btn_check  {
+    transform: scaleX(1);
+    width: -10%;
+      .check {
+      transform: rotate(360deg);
+    }
+    
+  }
+  &__tittle_text{
+    width: 70%;
+
+    }
+    &__secondary_text{
+      width: 70%;
+
+
+    }
+  
+  
+
+}
+
+.check {
+    height: unset;
+    background-image: url("../images/icons/check_mark3.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
+    height: 50%;
+    
+  transform: rotate(90deg);
+  transition: transform 500ms ease-in-out;
+}
+.normal_text{
+  //border: blue solid;
+  width: 70%;
+  font-weight: normal;
+  transition: width 5s ease-in-out;
+
+    
+  transform: rotate(90deg);
+  transition: transform 500ms ease-in-out;
+
+}
+.margin_left{
+  width: 20%;
+  text-align: center;
+  
+}
+.btn_check {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    position: absolute;
+    //width: 0.1%;
+    width: 12%;
+    height: 6.25%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-style: none;
+    color: $colour-black;
+    background: $colour-item;
+    right: 5%;
+    /*overflow: hidden;
+    visibility: hidden;*/
+    //background-color: transparent;
+    transform-origin:  100% 50%;
+    transform : scaleX(0);
+    transition: transform 500ms ease-in-out;
+
+}
+
+@keyframes buttoms {
+  100% {
+      transform: background-color(1.0);
+  }
+  80% {
+      transform: background-color(0.2);
+  }
+
+}
+
+
 
 .icon {
     display: inline-block;
