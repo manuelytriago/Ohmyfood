@@ -15,28 +15,103 @@
 
 
 .btn_menu2 {
-  @include btnmenu($colour-white,100%,100%);
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
-  &:hover +.btn_check  {
-    transform: scaleX(1);
-    width: -10%;
-      .check {
-      transform: rotate(360deg);
-    }
-    
+  @include btnmenu($colour-white,100%,100%);
+  &__menu_title{
+    margin-left: 5% ;
+    width: 75% ;
+    height: 50% ;
+
   }
-  &__tittle_text{
+  &__secondary_text{
+    margin-left: 5% ;
     width: 70%;
+    height: 50%;
 
-    }
-    &__secondary_text{
-      width: 70%;
+  }
+  &__price_text{
+    width: 20%;
+    height: 50%;
+    text-align: right;
+    transition: width 500ms ease-in-out;
+  }
+  &__check_buttom{
+    width: 20%;
+    height: 50%;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    position: absolute;
+    //width: 0.1%;
+    width: 12.5%;
+    height: 6.25%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-style: none;
+    color: $colour-black;
+    background: $colour-item;
+    right: 5%;
+    /*overflow: hidden;
+    visibility: hidden;
+    //background-color: transparent;*/
+    transform-origin:  100% 50%;
+    transform : scaleX(0);
+    transition: transform 500ms ease-in-out;
+    //transition: width 500ms ease-in-out;
+      &__check_img {
+      height: unset;
+      background-image: url("../images/icons/check_mark3.png");
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 50%;
+      height: 50%;
+      
+      /*transform: rotate(90deg);
+      transition: transform 500ms ease-in-out;*/
+      transition: transform 500ms ease-in-out;
+      }
 
-
-    }
+  }
+  &:hover > .btn_menu2__check_buttom {
+    //background-color: black;
   
-  
+    transform: scaleX(1);
+   
+      .btn_menu2__check_buttom__check_img {
+      transform: rotate(360deg);
+    } 
+  }
+}
+
+.btn_check {
+  //display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+  position: absolute;
+  //width: 0.1%;
+  width: 12.5%;
+  height: 6.25%;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-style: none;
+  color: $colour-black;
+  background: $colour-item;
+  right: 5%;
+  /*overflow: hidden;
+  visibility: hidden;
+  //background-color: transparent;*/
+  transform-origin:  100% 50%;
+  transform : scaleX(0);
+  transition: transform 500ms ease-in-out;
+  //transition: width 500ms ease-in-out;
 
 }
 
@@ -49,7 +124,8 @@
     width: 50%;
     height: 50%;
     
-  transform: rotate(90deg);
+  /*transform: rotate(90deg);
+  transition: transform 500ms ease-in-out;*/
   transition: transform 500ms ease-in-out;
 }
 .normal_text{
@@ -63,35 +139,7 @@
   transition: transform 500ms ease-in-out;
 
 }
-.margin_left{
-  width: 20%;
-  text-align: center;
-  
-}
-.btn_check {
-    display: flex;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    align-content: center;
-    position: absolute;
-    //width: 0.1%;
-    width: 12%;
-    height: 6.25%;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    border-style: none;
-    color: $colour-black;
-    background: $colour-item;
-    right: 5%;
-    /*overflow: hidden;
-    visibility: hidden;*/
-    //background-color: transparent;
-    transform-origin:  100% 50%;
-    transform : scaleX(0);
-    transition: transform 500ms ease-in-out;
 
-}
 
 @keyframes buttoms {
   100% {
