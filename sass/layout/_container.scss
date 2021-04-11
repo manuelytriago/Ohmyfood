@@ -2,23 +2,23 @@
     @include flex(space-around,column,unset);
     height: 100%;
     }
+    .container_restaurant {
+        @include flex(space-around,column,unset);
+        height: 218px;
+        }
 
-    .content {
-        justify-content:unset; 
-        height: 16%; 
-    }
     .content2 {
         @include flex(space-around,column,unset);
         border-top-right-radius: 25px;
         border-top-left-radius: 25px;
         position: relative;
         justify-content:unset; 
-        height: 100%;
+        height: 1280px;
         bottom: 2%; 
         background-color:$colour-gray-light ;
         &__title {
             @include flex(space-around,row,unset);
-            height: 16%;
+            height: 54px;
             &__heading{
                 @include flex(center,row,center);
                 padding-left: 5%;
@@ -38,24 +38,24 @@
         &__category {
             @include flex(space-between,column,center);
             width: 100%;
+            height: 356px;
             overflow: hidden;
             transition: all 450ms;
             &__heading{
-                
                 color: black;
                 width: 90%;
-                height: 10%;
+                height: 34px;
             }
-            
             &__heading2{
-                //@include flex(center,row,center); 
+                display: flex;   
+                flex-direction: column;   
                 border-top-right-radius: 10px;
                 border-bottom-right-radius: 10px;
                 border-top-left-radius: 10px;
                 border-bottom-left-radius: 10px;
                 color: black;
                 width: 90%;
-                height: 20%;
+                height: 322px;
                 margin-bottom: 5%;
             }
             &__heart{

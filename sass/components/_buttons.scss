@@ -12,88 +12,98 @@
 
 }
 
-
-
 .btn_menu2 {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  @include btnmenu($colour-white,100%,100%);
-  &__menu_title{
-    margin-left: 5% ;
-    width: 75% ;
-    height: 50% ;
-    flex-grow: 1;
-
-  }
-  &__secondary_text{
-    margin-left: 5% ;
-    width: 75%;
-    height: 50%;
-    flex-grow: 1;
-
-  }
-  &__price_text{
-    width: 10%;
-    height: 50%;
-    text-align: right;
-    flex-grow: 2;
-    transition: width 500ms ease-in-out;
-  }
-  &__check_buttom{
-    flex-basis: auto;
-    width: 20%;
-    height: 50%;
-    text-align: right;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    align-content: center;
-    position: absolute;
-    //width: 0.1%;
-    width: 12.5%;
-    height: 6.25%;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    border-style: none;
-    color: $colour-black;
-    background: $colour-item;
-    right: 5%;
-    /*overflow: hidden;
-    visibility: hidden;
-    //background-color: transparent;*/
-    transform-origin:  100% 50%;
-    transform : scaleX(0);
-    transition: transform 500ms ease-in-out;
-    //transition: width 500ms ease-in-out;
-      &__check_img {
-      height: unset;
-      background-image: url("../images/icons/check_mark3.png");
-      background-position: center center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      width: 50%;
-      height: 50%;
-      
-      /*transform: rotate(90deg);
-      transition: transform 500ms ease-in-out;*/
-      transition: transform 500ms ease-in-out;
-      }
-
-  }
-  &:hover > .btn_menu2__check_buttom {
-    //background-color: black;
   
-    transform: scaleX(1);
-   
-      .btn_menu2__check_buttom__check_img {
-      transform: rotate(360deg);
-    } 
-  }
-}
+  display: grid;
+  grid-template-areas: "title title price check"
+                       "description description price check";
+  /*flex-direction: row;
+  flex-wrap: wrap;*/
+  @include btnmenu($colour-white,90px,100%);
+  //visibility: hidden;
+    &__menu_title{
+      margin-left: 5% ;
+      //width: 75% ;
+      height: 100% ;
+      width: 238px;
+      grid-area: title;
 
-.btn_check {
+    }
+    &__secondary_text{
+      margin-left: 5% ;
+      //width: 75%;
+      height: 100%;
+      width: 238px;
+      grid-area: description;
+
+    }
+    &__price_text{
+    
+    width: 78px;
+    height: 100%;
+    grid-area: price;
+    display: flex;
+    position: relative;
+    text-align: right;
+    justify-content:right;
+    align-items: center;
+    //align-content:space-around;
+      transition: width 600ms ease-in;
+    }
+    &__check_buttom{
+      grid-area: check;
+      //flex-basis: auto;
+      width: 100%;
+      height: 100%;
+      text-align: left;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+      align-content: center;
+      position: relative;
+      //width: 0.1%;
+      border-top-right-radius: 9px;
+      border-bottom-right-radius: 9px;
+      border-style: none;
+      color: $colour-black;
+      background: $colour-item;
+      //right: 5%;
+      /*overflow: hidden;
+      visibility: hidden;
+      //background-color: transparent;*/
+      
+      transform-origin:  100% 50%;
+      transform : scaleX(0);
+      transition: transform 600ms ease-in-out;
+      //transition: width 500ms ease-in-out;
+        &__check_img {
+        height: unset;
+        background-image: url("../images/icons/check_mark4.png");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 30px;
+        height: 30px;
+        
+        /*transform: rotate(90deg);
+        transition: transform 500ms ease-in-out;*/
+        transition: transform 600ms ease-in;
+        }
+
+    }
+    &:hover > .btn_menu2__check_buttom {
+      //background-color: black;
+        visibility:visible;
+        transform: scaleX(1.35);
+        .btn_menu2__check_buttom__check_img {
+        transform: rotate(360deg);
+      } 
+    }
+
+    //transition: transform 700ms cubic-bezier(.18,.49,1,.23);
+}
+/*.btn_check {
   //display: flex;
   align-items: center;
   text-align: center;
@@ -111,9 +121,9 @@
   right: 5%;
   /*overflow: hidden;
   visibility: hidden;
-  //background-color: transparent;*/
+  //background-color: transparent;
   transform-origin:  100% 50%;
-  transform : scaleX(0);
+  transform : scaleX(1);
   transition: transform 500ms ease-in-out;
   //transition: width 500ms ease-in-out;
 
@@ -126,12 +136,12 @@
     background-repeat: no-repeat;
     background-size: cover;
     width: 50%;
-    height: 50%;
+    height: 100%;
     
-  /*transform: rotate(90deg);
-  transition: transform 500ms ease-in-out;*/
+  transform: rotate(90deg);
   transition: transform 500ms ease-in-out;
-}
+  transition: transform 500ms ease-in-out;
+}*/
 .normal_text{
   //border: blue solid;
   width: 70%;
@@ -143,7 +153,6 @@
   transition: transform 500ms ease-in-out;
 
 }
-
 .icon {
     display: inline-block;
     width: 15px;
@@ -153,4 +162,5 @@
 .icon_menu {
     margin-left: 8%;
   }
+  
  

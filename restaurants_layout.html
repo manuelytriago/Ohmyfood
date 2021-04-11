@@ -15,7 +15,39 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href="css/all.css" rel="stylesheet">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+          $(".btn_menu2").hover(function(){
+              var elem = this.id;
+              var number = elem.match(/(\d+)/);
+              console.log(number);
+              var final = number['0'];
+              console.log(final);
+              var final2 = ++final;
+              console.log(final2);
+              $('#prices'+final2).css("width", "1px");
+            
+            }, function(){
+                var elem = this.id;
+              var number = elem.match(/(\d+)/);
+              var final = number['0'];
+              var final2 = ++final;
+                $('#prices'+final2).css("width", "78px");
 
+              
+            
+          });
+        });
+     
+      /*$(document).ready(function(){
+          $(".btn_menu2").hover(function(){
+            $('#prices').css("width", "80%");
+            }, function(){
+            $('#prices').css("width", "150%");
+          });
+        });*/
+        </script>
 </head>
 
 <body>
@@ -24,7 +56,7 @@
             <a href="index.html" class="back"> <i class="fas fa-arrow-left fa-lg"> </i> </a>
                 
             <div class="header__logo height">
-                <img alt="Reservia" src="images/logo/ohmyfood.png" class="header__logo__responsive">
+                <img alt="ohmyfood" src="images/logo/ohmyfood.png" class="header__logo__responsive">
 
             </div>
         </header>
@@ -33,7 +65,7 @@
     </section>
 
     <section class="section_restaurants">
-        <div class="container content">
+        <div class="container_restaurant">
             <div class="container_menu container_menu2">
                 <figure class="width height bottom">
                     <a href="" class="link_size">
@@ -42,10 +74,8 @@
                     </a>
                 </figure>
             </div>
-
             <!-- <button class="btn2" type="submit"> 
             </button> -->
-
         </div>
         <div class="content2">
             <div class="content2__title"> 
@@ -54,91 +84,82 @@
             </div>
             <div class="content2__category">
                 <h3 class="content2__category__heading" >ENTREES</h3> 
-                    <div class="content2__category__heading2"> 
-                    <div class="btn_menu2" type="submit" >
-                        <div class="btn_menu2__menu_title">Escargot</div>
-                        <div class="btn_menu2__secondary_text">With southern Frenc spices</div> <div class="btn_menu2__price_text">25€</div> 
+                <div class="content2__category__heading2"> 
+                    <div id="prices1" class="btn_menu2" type="submit" >
+                        <div  class="btn_menu2__menu_title">Escargot</div>
+                        <div class="btn_menu2__secondary_text">With southern Frenc spices</div> <div id="prices2" class="btn_menu2__price_text">25€</div> 
                         <div class="btn_menu2__check_buttom"> <div class="btn_menu2__check_buttom__check_img"> </div> </div> 
-                    
-                    </div>
-                    </div>
-                    <div class="content2__category__heading2"> 
-                        <div class="btn_menu2" type="submit" >
-                        <div class="btn_menu2__menu_title">Escargot</div>
-                        <div class="btn_menu2__secondary_text">With southern Frenc spices</div> <div class="btn_menu2__price_text">25€</div> 
-                        <div class="btn_menu2__check_buttom"> <div class="btn_menu2__check_buttom__check_img"> </div> </div> 
-                    
-                    </div>
-                    </div>
-                    <div class="content2__category__heading2"> 
-                        <div class="btn_menu2" type="submit" >
-                        <div class="btn_menu2__menu_title">Escargot</div>
-                        <div class="btn_menu2__secondary_text">With southern Frenc spices</div> <div class="btn_menu2__price_text">25€</div> 
-                        <div class="btn_menu2__check_buttom"> <div class="btn_menu2__check_buttom__check_img"> </div> </div> 
-                    
-                    </div>
                     </div>
                 </div>
-                <div class="content2__category">
+                <div class="content2__category__heading2"> 
+                    <div id="prices3" class="btn_menu2" type="submit" >
+                        <div class="btn_menu2__menu_title">Duck Foie Gras</div>
+                        <div class="btn_menu2__secondary_text">with black truffle shavings</div> <div id="prices4" class="btn_menu2__price_text">35€</div> 
+                        <div class="btn_menu2__check_buttom"> <div class="btn_menu2__check_buttom__check_img"> </div> </div> 
+                    
+                    </div>
+                </div>
+                <div class="content2__category__heading2"> 
+                    <div id="prices5" class="btn_menu2" type="submit" >
+                        <div class="btn_menu2__menu_title">Fried egg</div>
+                        <div class="btn_menu2__secondary_text">......</div> <div id="prices6" class="btn_menu2__price_text">35€</div> 
+                        <div class="btn_menu2__check_buttom"> <div class="btn_menu2__check_buttom__check_img"> </div> </div> 
+                    
+                    </div>
+                </div>
+            </div>
+            <div class="content2__category">
                 <h3 class="content2__category__heading" >MAIN DISH</h3> 
                 <div class="content2__category__heading2"> 
-                <button class="btn_menu2" type="submit" >
-                    <b class="btn_menu2__tittle_text">Escargot</b>
-                    <br>
-                    <b class="btn_menu2__secondary_text">With southern Frenc spices</b> <b class="margin_left">25€</b> 
-              
-                </button>
-                <div class="btn_check"> <div class="check"> </div> </div>
+                    <div id="prices7" class="btn_menu2" type="submit" >
+                        <div  class="btn_menu2__menu_title">Herb-Encrusted Steak</div>
+                        <div class="btn_menu2__secondary_text">With delicately sliced and seasoned vegetable</div> <div id="prices8" class="btn_menu2__price_text">40€</div> 
+                        <div class="btn_menu2__check_buttom"> <div class="btn_menu2__check_buttom__check_img"> </div> </div> 
+                    </div>
                 </div>
                 <div class="content2__category__heading2"> 
-                    <button class="btn_menu2" type="submit" >
-                        <b class="btn_menu2__tittle_text">Escargot</b>
-                        <br>
-                        <b class="btn_menu2__secondary_text">With southern Frenc spices</b> <b class="margin_left">25€</b> 
-                  
-                    </button>
-                    <div class="btn_check"> <div class="check"> </div> </div>
+                    <div id="prices9" class="btn_menu2" type="submit" >
+                        <div class="btn_menu2__menu_title">Ox Tail Shepard's Pie</div>
+                        <div class="btn_menu2__secondary_text">with black truffle and pureed parsnips</div> <div id="prices10" class="btn_menu2__price_text">35€</div> 
+                        <div class="btn_menu2__check_buttom"> <div class="btn_menu2__check_buttom__check_img"> </div> </div> 
+                    
                     </div>
-                    <div class="content2__category__heading2"> 
-                        <button class="btn_menu2" type="submit" >
-                            <b class="btn_menu2__tittle_text">Escargot</b>
-                            <br>
-                            <b class="btn_menu2__secondary_text">With southern Frenc spices</b> <b class="margin_left">25€</b> 
-                      
-                        </button>
-                        <div class="btn_check"> <div class="check"> </div> </div>
-                        </div>
+                </div>
+                <div class="content2__category__heading2"> 
+                    <div id="prices11" class="btn_menu2" type="submit" >
+                        <div class="btn_menu2__menu_title">Filet of Sole</div>
+                        <div class="btn_menu2__secondary_text">with citrus dressing</div> <div id="prices12" class="btn_menu2__price_text">44€</div> 
+                        <div class="btn_menu2__check_buttom"> <div class="btn_menu2__check_buttom__check_img"> </div> </div> 
+                    
                     </div>
-                <div class="content2__category">
+                </div>
+            </div>
+            <div class="content2__category">
                 <h3 class="content2__category__heading" >DESSERTS</h3> 
                 <div class="content2__category__heading2"> 
-                <button class="btn_menu2" type="submit" >
-                    <b class="btn_menu2__tittle_text">Escargot</b>
-                    <br>
-                    <b class="btn_menu2__secondary_text">With southern Frenc spices</b> <b class="margin_left">25€</b> 
-              
-                </button>
-                <div class="btn_check"> <div class="check"> </div> </div>
+                    <div id="prices13" class="btn_menu2" type="submit" >
+                        <div  class="btn_menu2__menu_title">Paris-Brest</div>
+                        <div class="btn_menu2__secondary_text">Revisted</div> <div id="prices14" class="btn_menu2__price_text">18€</div> 
+                        <div class="btn_menu2__check_buttom"> <div class="btn_menu2__check_buttom__check_img"> </div> </div> 
+                    </div>
                 </div>
                 <div class="content2__category__heading2"> 
-                    <button class="btn_menu2" type="submit" >
-                        <b class="btn_menu2__tittle_text">Escargot</b>
-                        <br>
-                        <b class="btn_menu2__secondary_text">With southern Frenc spices</b> <b class="margin_left">25€</b> 
-                  
-                    </button>
-                    <div class="btn_check"> <div class="check"> </div> </div>
+                    <div id="prices15" class="btn_menu2" type="submit" >
+                        <div class="btn_menu2__menu_title">Chocolate Macaroons</div>
+                        <div class="btn_menu2__secondary_text">with vanilla ice cream</div> <div id="prices16" class="btn_menu2__price_text">22€</div> 
+                        <div class="btn_menu2__check_buttom"> <div class="btn_menu2__check_buttom__check_img"> </div> </div> 
+                    
                     </div>
-                    <div class="content2__category__heading2"> 
-                        <button class="btn_menu2" type="submit" >
-                            <b class="btn_menu2__tittle_text">Escargot</b>
-                            <br>
-                            <b class="btn_menu2__secondary_text">With southern Frenc spices</b> <b class="margin_left">25€</b> 
-                      
-                        </button>
-                        <div class="btn_check"> <div class="check"> </div> </div>
-                        </div>
                 </div>
+                <div class="content2__category__heading2"> 
+                    <div id="prices17" class="btn_menu2" type="submit" >
+                        <div class="btn_menu2__menu_title">Chocolate Mousse</div>
+                        <div class="btn_menu2__secondary_text">With spices and black truffle</div> <div id="prices18" class="btn_menu2__price_text">23€</div> 
+                        <div class="btn_menu2__check_buttom"> <div class="btn_menu2__check_buttom__check_img"> </div> </div> 
+                    
+                    </div>
+                </div>
+            </div>
 
         </div>
 
@@ -160,7 +181,6 @@
             </div>         
     </footer>
 </section>  
-        
      
 </body>
 

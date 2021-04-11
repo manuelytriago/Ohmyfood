@@ -199,11 +199,12 @@ figcaption {
 }
 
 .btn_menu2 {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-areas: "title title price check" "description description price check";
+  /*flex-direction: row;
+  flex-wrap: wrap;*/
   width: 100%;
-  height: 100%;
+  height: 90px;
   text-align: left;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -224,103 +225,109 @@ figcaption {
 }
 .btn_menu2__menu_title {
   margin-left: 5%;
-  width: 75%;
-  height: 50%;
-  flex-grow: 1;
+  height: 100%;
+  width: 238px;
+  grid-area: title;
 }
 .btn_menu2__secondary_text {
   margin-left: 5%;
-  width: 75%;
-  height: 50%;
-  flex-grow: 1;
+  height: 100%;
+  width: 238px;
+  grid-area: description;
 }
 .btn_menu2__price_text {
-  width: 10%;
-  height: 50%;
+  width: 78px;
+  height: 100%;
+  grid-area: price;
+  display: flex;
+  position: relative;
   text-align: right;
-  flex-grow: 2;
-  transition: width 500ms ease-in-out;
+  justify-content: right;
+  align-items: center;
+  transition: width 600ms ease-in;
 }
 .btn_menu2__check_buttom {
-  flex-basis: auto;
-  width: 20%;
-  height: 50%;
-  text-align: right;
+  grid-area: check;
+  width: 100%;
+  height: 100%;
+  text-align: left;
   display: flex;
   align-items: center;
   text-align: center;
   justify-content: center;
   align-content: center;
-  position: absolute;
-  width: 12.5%;
-  height: 6.25%;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
+  position: relative;
+  border-top-right-radius: 9px;
+  border-bottom-right-radius: 9px;
   border-style: none;
   color: black;
   background: #94E2D0;
-  right: 5%;
   /*overflow: hidden;
   visibility: hidden;
   //background-color: transparent;*/
   transform-origin: 100% 50%;
   transform: scaleX(0);
-  transition: transform 500ms ease-in-out;
+  transition: transform 600ms ease-in-out;
 }
 .btn_menu2__check_buttom__check_img {
   height: unset;
-  background-image: url("../images/icons/check_mark3.png");
+  background-image: url("../images/icons/check_mark4.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 50%;
-  height: 50%;
+  width: 30px;
+  height: 30px;
   /*transform: rotate(90deg);
   transition: transform 500ms ease-in-out;*/
-  transition: transform 500ms ease-in-out;
+  transition: transform 600ms ease-in;
 }
 .btn_menu2:hover > .btn_menu2__check_buttom {
-  transform: scaleX(1);
+  visibility: visible;
+  transform: scaleX(1.35);
 }
 .btn_menu2:hover > .btn_menu2__check_buttom .btn_menu2__check_buttom__check_img {
   transform: rotate(360deg);
 }
 
-.btn_check {
+/*.btn_check {
+  //display: flex;
   align-items: center;
   text-align: center;
   justify-content: center;
   align-content: center;
   position: absolute;
+  //width: 0.1%;
   width: 12.5%;
   height: 6.25%;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   border-style: none;
-  color: black;
-  background: #94E2D0;
+  color: $colour-black;
+  background: $colour-item;
   right: 5%;
   /*overflow: hidden;
   visibility: hidden;
-  //background-color: transparent;*/
-  transform-origin: 100% 50%;
-  transform: scaleX(0);
+  //background-color: transparent;
+  transform-origin:  100% 50%;
+  transform : scaleX(1);
   transition: transform 500ms ease-in-out;
+  //transition: width 500ms ease-in-out;
+
 }
 
 .check {
-  height: unset;
-  background-image: url("../images/icons/check_mark3.png");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 50%;
-  height: 50%;
-  /*transform: rotate(90deg);
-  transition: transform 500ms ease-in-out;*/
-  transition: transform 500ms ease-in-out;
-}
+    height: unset;
+    background-image: url("../images/icons/check_mark3.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
+    height: 100%;
 
+  transform: rotate(90deg);
+  transition: transform 500ms ease-in-out;
+  transition: transform 500ms ease-in-out;
+}*/
 .normal_text {
   width: 70%;
   font-weight: normal;
@@ -425,7 +432,7 @@ figcaption {
   display: flex;
   flex-direction: column;
   background: #EAEAEA;
-  height: 920px;
+  height: 1500px;
 }
 
 .section_footer {
@@ -492,9 +499,12 @@ figcaption {
   height: 100%;
 }
 
-.content {
-  justify-content: unset;
-  height: 16%;
+.container_restaurant {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: unset;
+  height: 218px;
 }
 
 .content2 {
@@ -506,7 +516,7 @@ figcaption {
   border-top-left-radius: 25px;
   position: relative;
   justify-content: unset;
-  height: 100%;
+  height: 1280px;
   bottom: 2%;
   background-color: #EAEAEA;
 }
@@ -515,7 +525,7 @@ figcaption {
   flex-direction: row;
   justify-content: space-around;
   align-items: unset;
-  height: 16%;
+  height: 54px;
 }
 .content2__title__heading {
   display: flex;
@@ -551,22 +561,25 @@ figcaption {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  height: 356px;
   overflow: hidden;
   transition: all 450ms;
 }
 .content2__category__heading {
   color: black;
   width: 90%;
-  height: 10%;
+  height: 34px;
 }
 .content2__category__heading2 {
+  display: flex;
+  flex-direction: column;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   color: black;
   width: 90%;
-  height: 20%;
+  height: 322px;
   margin-bottom: 5%;
 }
 .content2__category__heart {
