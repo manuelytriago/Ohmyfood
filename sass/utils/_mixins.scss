@@ -70,11 +70,11 @@
     border-style: none;
     color: $colour-black;
     background: $colour;
-    /*&:hover{
+    &:hover{
         background: darken($colour-menu-buttom, 1%);
         
     
-    }*/
+    }
    
     &--full-width {
         width: 40%;
@@ -103,4 +103,16 @@
 @mixin section-divs {
     margin: 0 0 0 $margin-divs-left;
 
+}
+@mixin media-md {
+    @media screen and (min-width: $tablet-width){
+        @content;
+    } 
+    
+    
+}
+@mixin media-lg {
+    @media screen and (min-width: $desktop-width){
+        @content;
+    }
 }
