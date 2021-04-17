@@ -1,6 +1,68 @@
     .container {
     @include flex(space-around,column,unset);
     height: 100%;
+    &__container_big {
+   
+        @include section-divs;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        height: 3%;
+        
+        
+        }
+    &__container_small {
+   
+            @include section-divs;
+            margin-top: 10%;
+            height: 10%;
+            
+            
+            }
+
+    &__container_menu {
+            @include section-divs;
+            height: 25%;
+            margin-bottom: 5%;
+            &__new_rest {
+                @include new-buttom;
+                border-top-left-radius: 2px;
+                border-bottom-left-radius: 2px;
+                border-top-right-radius: 2px;
+                border-bottom-right-radius: 2px;
+                left: 76%;
+                top: 3%;  
+                height: 8%;
+                width: 16%;
+                background-color: $colour-new;
+                color: darken($colour-new, 40%);
+                
+            }
+            &__new_rest2 {
+                @include new-buttom ;
+                border-radius: 50%;
+                right: 2%;
+                top: 44%; 
+                height: 22%;
+                width: 5%;
+                background-color: $colour-number;
+                color: white; 
+                
+                
+            }
+            &__new_rest3{
+                @include new-buttom ; 
+                height: 10%;
+                width: 16%; 
+            }
+            
+            
+        
+            }
+    &__container_menu2 {
+                margin-left: 0;
+                height: 100%;
+            }
+
     }
     .container_restaurant {
         @include flex(space-around,column,unset);
@@ -39,8 +101,8 @@
             @include flex(space-between,column,center);
             width: 100%;
             height: 356px;
-            overflow: hidden;
-            transition: all 450ms;
+            //overflow: hidden;
+            //transition: all 450ms;
             &__heading{
                 color: black;
                 width: 90%;
@@ -53,20 +115,56 @@
                 border-bottom-right-radius: 10px;
                 border-top-left-radius: 10px;
                 border-bottom-left-radius: 10px;
+                
                 color: black;
                 width: 90%;
                 height: 322px;
                 margin-bottom: 5%;
+                @for $i from 1 through 3 {
+                    &--#{$i}{
+                    transform-origin: top center;
+                    animation: menus-animation 1000ms ease-in-out forwards;
+                    //animation: menus-animation 500ms ($i * 1000ms) ease-in-out forwards;
+                    }
+
+                }
+                
             }
             &__heart{
                 @include hearimg;
-               
                 color: black;
                 width: 20%;
                 
             }
             
     
+        }
+    }
+
+    @keyframes menus-animation{
+        0% {
+            opacity: 0;
+            transform: translateY(0);
+        }
+        20% {
+            opacity: 0.3;
+            transform: translateY(0.2);
+        }
+        50% {
+            opacity: 0.5;
+            transform: translateY(0.5);
+        }
+        80% {
+            opacity: 0.8;
+            transform: translateY(0.8); 
+        }
+        /*85%,100% {
+            opacity: 1;
+        }
+        */
+        100% {
+            opacity: 1;
+            transform: translateY(1);
         }
     }
     
@@ -76,71 +174,19 @@
     .bottom {
         bottom:unset;
     }
-
-    .container_small {
+    
    
-    @include section-divs;
-    margin-top: 10%;
-    height: 10%;
-    
-    
-    }
-
-    .container_big {
-   
-        @include section-divs;
-        margin-top: 5%;
-        height: 5%;
-        
-        
-        }
-
-    .container_menu {
-    @include section-divs;
-    height: 25%;
-    &__new_rest {
-        @include new-buttom;
-        border-top-left-radius: 2px;
-        border-bottom-left-radius: 2px;
-        border-top-right-radius: 2px;
-        border-bottom-right-radius: 2px;
-        left: 76%;
-        top: 3%;  
-        height: 10%;
-        width: 16%;
-        background-color: $colour-new;
-        color: darken($colour-new, 40%);
-        
-    }
-    &__new_rest2 {
-        @include new-buttom ;
-        border-radius: 50%;
-        right: 2%;
-        top: 44%; 
-        height: 22%;
-        width: 5%;
-        background-color: $colour-number;
-        color: white; 
-        
-    }
-    &__new_rest3{
-        @include new-buttom ; 
-        height: 10%;
-        width: 16%; 
-    }
-    
-
-    }
-    .container_menu2 {
-        margin-left: 0;
-        height: 100%;
-    }
 
     .width {
         width: 100%;
     }
+    .height {
+        height: 100%;
     
-
+    
+    }
+    
+    
     .restaurant1 {
     background-image: url("../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
     background-position: center center;
@@ -201,5 +247,13 @@
         }
         
       }
+      .clean_borders {
+
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+    
+        }
+       
 
 
+    

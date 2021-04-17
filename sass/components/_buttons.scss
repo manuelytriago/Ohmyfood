@@ -20,7 +20,7 @@
   /*flex-direction: row;
   flex-wrap: wrap;*/
   @include btnmenu($colour-white,90px,100%);
-  //visibility: hidden;
+  //display: none;
     &__menu_title{
       margin-left: 5% ;
       //width: 75% ;
@@ -103,6 +103,32 @@
 
     //transition: transform 700ms cubic-bezier(.18,.49,1,.23);
 }
+
+/*
+.dropdown_menu-4{
+  for num in (1.3)
+     .dropdown_item-{num}  
+       transform-origin: top center
+       animation: scaleZ 300ms (num * 60ms) ease-in-out forwards
+
+
+@keyframes scaleZ {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  
+  80% {
+    transform: scale(1.07);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+}*/
+
 /*.btn_check {
   //display: flex;
   align-items: center;

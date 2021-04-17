@@ -1,0 +1,79 @@
+@include media-md {
+    .container{
+        &__container_small {
+            margin-top: 0.5%;
+        
+           } 
+        &__container_big {
+            margin-top: 4%;
+            margin-bottom: 2%;
+            height: 3%;            
+            }
+        
+        &__container_menu{
+            margin-bottom: 0.5%;
+            height: 30%;
+            &__new_rest2 {
+                /*@include new-buttom ;
+                border-radius: 50%;
+                right: 2%;
+                top: 44%; */
+                height: 28%;
+                width: 4%;
+                /*background-color: $colour-number;
+                color: white; */
+                
+            }
+        }
+    }
+}
+@include media-lg {
+
+    ul {
+        margin-top: 0.5%;
+        margin-left: 2%;
+    }
+    .section_restaurants{
+        height: 1500px;
+    
+    }
+    .header {
+        margin-top: 0%; 
+        &__logo {
+           
+            width: 20%;
+            height: 100%;
+        }
+    }
+    .heart {
+        margin: 1% 5% 0 0;
+
+    }
+        .container{
+            &__container_small {
+                margin-top: 0.5%;
+            
+               } 
+            &__container_big {
+                margin-top: 4%;
+                margin-bottom: 2%;
+                height: 3%;            
+                }
+            
+            &__container_menu{
+                margin-bottom: 0.5%;
+                height: 30%;
+                &__new_rest2 {
+                    /*@include new-buttom ;
+                    border-radius: 50%;*/
+                    right: 1%;
+                    top: 50%; 
+                    height: 35%;
+                    width: 2%;
+                    /*background-color: $colour-number;
+                    color: white; */
+                    
+                }
+            }
+        }
+}
