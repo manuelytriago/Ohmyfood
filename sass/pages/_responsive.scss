@@ -1,5 +1,21 @@
 @include media-md {
+    .content2 {
+        &__title {
+            &__heart{
+                margin: 5% 0 0 5%;  
+            }
+    
+        }
+        &__category {
+            height: 408px;
+            
+            
+    
+        }
+    }
+
     .container{
+        
         &__container_small {
             margin-top: 0.5%;
         
@@ -12,7 +28,7 @@
         
         &__container_menu{
             margin-bottom: 0.5%;
-            height: 30%;
+            height: 100%;
             &__new_rest2 {
                 /*@include new-buttom ;
                 border-radius: 50%;
@@ -26,6 +42,15 @@
             }
         }
     }
+    .btn_menu2 {
+        &__menu_title{
+            width: 600px;
+      
+          }
+    }
+
+
+
 }
 @include media-lg {
 
@@ -45,10 +70,9 @@
             height: 100%;
         }
     }
-    .heart {
-        margin: 1% 5% 0 0;
-
-    }
+    
+    
+    
         .container{
             &__container_small {
                 margin-top: 0.5%;
