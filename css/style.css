@@ -629,7 +629,10 @@ figcaption {
   width: 20px;
   height: 20px;
   content: url("../images/icons/heart-outline.svg");
-  margin: 5% 0 0 5%;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  margin: 6.5% 0 0 5%;
   color: black;
   width: 20%;
 }
@@ -647,6 +650,23 @@ figcaption {
   align-items: center;
   width: 100%;
   height: 356px;
+  /*transform-origin: top center;
+  animation: FadeIn 1s ease-in-out forwards;
+
+  //animation: FadeIn 1s linear;
+      animation-fill-mode: both;
+      &:nth-child(1){
+          animation-delay: .5s 
+      }
+      &:nth-child(2){
+          animation-delay: 1s 
+      }
+      &:nth-child(3){
+          animation-delay: 1.5s 
+      }
+
+
+      */
 }
 .content2__category__heading {
   color: black;
@@ -664,18 +684,42 @@ figcaption {
   width: 90%;
   height: 322px;
   margin-bottom: 5%;
+  animation: 0.45s ease-out 0s 1 slideOnTopFromBottom;
+  /*transform-origin: center bottom;
+      animation: FadeIn 1s ease-in-out forwards;
+  //animation: FadeIn 1s linear;
+      animation-fill-mode: forwards;
+      transition : transform 0.5s ease;
+      &:nth-child(1){
+          animation-delay: .25s 
+      }
+      &:nth-child(2){
+          animation-delay: 0.5s 
+      }
+      &:nth-child(3){
+          animation-delay: 1s 
+      }*/
 }
 .content2__category__heading2--1 {
   transform-origin: top center;
-  animation: menus-animation 1000ms ease-in-out forwards;
+  animation: menus-animation 500ms 1000ms ease-in-out forwards;
 }
 .content2__category__heading2--2 {
   transform-origin: top center;
-  animation: menus-animation 1000ms ease-in-out forwards;
+  animation: menus-animation 500ms 2000ms ease-in-out forwards;
 }
 .content2__category__heading2--3 {
   transform-origin: top center;
-  animation: menus-animation 1000ms ease-in-out forwards;
+  animation: menus-animation 500ms 3000ms ease-in-out forwards;
+}
+.content2__category__heading2:nth-child(4) {
+  animation-delay: 0.6s;
+}
+.content2__category__heading2:nth-child(3) {
+  animation-delay: 0.55s;
+}
+.content2__category__heading2:nth-child(2) {
+  animation-delay: 0.5s;
 }
 .content2__category__heart {
   margin: 3% 10% 0 0;
@@ -695,32 +739,68 @@ figcaption {
   margin: 0 auto;
 }
 
-@keyframes menus-animation {
+@keyframes slideOnTopFromBottom {
   0% {
     opacity: 0;
-    transform: translateY(0);
+    transform: translateY(100%);
   }
-  20% {
-    opacity: 0.3;
-    transform: translateY(0.2);
+  25% {
+    opacity: 0.25;
+    transform: translateY(75%);
   }
   50% {
     opacity: 0.5;
-    transform: translateY(0.5);
+    transform: translateY(50%);
   }
-  80% {
-    opacity: 0.8;
-    transform: translateY(0.8);
+  75% {
+    opacity: 0.75;
+    transform: translateY(25%);
   }
-  /*85%,100% {
-      opacity: 1;
-  }
-  */
   100% {
     opacity: 1;
     transform: translateY(1);
   }
 }
+@keyframes FadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(0.1);
+  }
+  85% {
+    opacity: 0.8;
+    transform: translateY(0.85);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(1);
+  }
+}
+/*@keyframes menus-animation{
+    0% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+    20% {
+        opacity: 0.3;
+        transform: translateY(0.2);
+    }
+    50% {
+        opacity: 0.5;
+        transform: translateY(0.5);
+    }
+    80% {
+        opacity: 0.8;
+        transform: translateY(0.8); 
+    }
+    /*85%,100% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(1);
+    }
+}*/
 .bottom {
   bottom: unset;
 }
@@ -1029,6 +1109,13 @@ figcaption {
 }
 
 @media screen and (min-width: 768px) {
+  .content2__title__heart {
+    margin: 5% 0 0 5%;
+  }
+  .content2__category {
+    height: 408px;
+  }
+
   .container__container_small {
     margin-top: 0.5%;
   }
@@ -1039,7 +1126,7 @@ figcaption {
   }
   .container__container_menu {
     margin-bottom: 0.5%;
-    height: 30%;
+    height: 100%;
   }
   .container__container_menu__new_rest2 {
     /*@include new-buttom ;
@@ -1050,6 +1137,10 @@ figcaption {
     width: 4%;
     /*background-color: $colour-number;
     color: white; */
+  }
+
+  .btn_menu2__menu_title {
+    width: 600px;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -1068,10 +1159,6 @@ figcaption {
   .header__logo {
     width: 20%;
     height: 100%;
-  }
-
-  .heart {
-    margin: 1% 5% 0 0;
   }
 
   .container__container_small {
