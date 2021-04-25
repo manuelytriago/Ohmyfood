@@ -1,11 +1,11 @@
 
-.header_section{
+.header_section_menu{
 height: 240px;
 
 }
 
-.header_section_menu{
-    height: 35px;
+.header_section{
+    height: 75px;
 
 }
 
@@ -33,6 +33,11 @@ height: 240px;
         }
     }
 }
+.height {
+    height: 90%;
+
+
+}
 
 .header_location {
     background: $colour-gray-light;
@@ -43,6 +48,7 @@ height: 240px;
     height: 15%; 
     justify-content: center;
     align-items: center;
+    font-family: 'Roboto';
     &__logo {
         display: flex;
         flex-direction: column;
@@ -77,6 +83,7 @@ height: 240px;
     }
     &__p {
         text-align: center;
+        font-family: "Roboto", sans-serif;;
         margin: 0 8% 0 8%;
     }
 }
@@ -84,12 +91,12 @@ height: 240px;
 .section_restaurants{
     display: flex;
     flex-direction: column;
-    background: $colour-gray-light; 
     height: 1000px;
+    background-color:$colour-gray-light ;
 
 }
 .menu_restaurant_height{
-    height: 1500px;
+    height: 1280px;
 }
 
 .section_footer{
@@ -98,13 +105,48 @@ height: 240px;
     justify-content: space-around;
     background: $colour-footer; 
     height: 160px;
+    line-height: 1.75;
 }
 .back {
  @include small-images;
  position:relative;
  right: 20%;
+    &:active + loading__container__ball{
+        display: block;
+        animation: loading .6s ease-in-out 5 alternate;
+        animation-delay: 0s;
+        
+    }
 
 }
-.heart {
+@keyframes loading {
+	0% {
+		transform: translateX(-15px);
+	}
+	50% {
+		transform: translateX(15px);
+	}
+	100% {
+		transform: translateX(-15px);
+	}
+}
+.heart1 {
+    z-index: 2;
+    @include hearimg;
+    &:hover + .heart{
+        z-index: 2;
+        color: $colour-primary;
+       
+        //background: linear-gradient(to top,$colour-primary 0%, $colour-secondary 100%);
+    
+        //content:url("../images/icons/heart-outline2.svg");
+    }
+    &:active + .heart{
+        color: $colour-primary;
+      }
+  }
+  .heart {
+    z-index: 1;
+    color: white;
     @include hearimg
   }

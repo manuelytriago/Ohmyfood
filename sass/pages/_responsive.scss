@@ -1,14 +1,16 @@
 @include media-md {
     .content2 {
-        &__title {
-            &__heart{
-                margin: 5% 0 0 5%;  
-            }
-    
-        }
+        
         &__category {
-            height: 408px;
-            
+            height: 316px;
+            &__heading3{
+                padding-top: unset;
+                width: 100%;
+                height: 30px;
+            }
+            &__heading4{
+                width: 5%;
+            }
             
     
         }
@@ -45,21 +47,82 @@
     .btn_menu2 {
         &__menu_title{
             width: 600px;
+            margin-top: 1%;
+          }
+          &__secondary_text{
+            padding-bottom: unset;
+            margin-left: 5% ;
       
           }
+          &__price_text{
+            padding-top: unset;
+            
+        }
+
     }
-
-
-
 }
 @include media-lg {
+    .content2 {
+        &__title {
+            @include flex(space-between,row,unset);
+            height: 54px;
+            &__heading{
+                @include flex(left,column,left);
+                text-align: center;
+                padding-left: 7%;
+                margin: 0% 0 0 0%;
+                color: black;
+                width: 90%;
+                font-size: 22px;
+                font-family: "Shrikhand";
+                font-weight: 500;
+                padding-top: 0.25%;
+                
+            }
+            &__heart{
+                z-index: 1;
+                margin: 0% 20% 0 0%;
+                padding-top: 0.25%;
+                
+            }
+            &__heart1{
+                margin: 0% 20% 0 0%;
+                padding-top: 0.25%;
+            }
+        }
+        &__category {
+            height: 316px;
+
+            &__heading{
+                text-align: center;
+                margin-bottom: 0%;
+            }
+            &__heading3{
+                padding-top: unset;
+                width: 100%;
+                height: 30px;
+            }
+            &__heading4{
+                align-self: unset;
+                text-align: center;
+                justify-content: center;
+                width: 5%;
+               margin-left: 3.25%;
+               width: 3%;
+               margin-bottom: 1%;
+            }
+            
+    
+        }
+    }
+
 
     ul {
         margin-top: 0.5%;
         margin-left: 2%;
     }
     .section_restaurants{
-        height: 1500px;
+        height: 1280px;
     
     }
     .header {
@@ -74,6 +137,13 @@
     
     
         .container{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: unset;
+                height: 100%;
+                font-family: "Roboto";
+            
             &__container_small {
                 margin-top: 0.5%;
             
@@ -86,7 +156,7 @@
             
             &__container_menu{
                 margin-bottom: 0.5%;
-                height: 30%;
+                height: 100%;
                 &__new_rest2 {
                     /*@include new-buttom ;
                     border-radius: 50%;*/

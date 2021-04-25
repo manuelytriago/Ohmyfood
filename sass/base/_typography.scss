@@ -1,7 +1,7 @@
 body {
     background-color: $colour-white;
     color: $colour-gray;
-    font-family: "Raleway script=all rev=1";
+    font-family: 'Shrikhand';
     font-weight: 200;
     font-size: 16px;
     height: 100%;
@@ -9,8 +9,8 @@ body {
 
 section {
     background-color: $colour-white;
-    color: $colour-gray;
-    font-family: "Raleway script=all rev=1";
+    color: black;
+    font-family: 'Shrikhand';
     font-weight: 200;
     font-size: 16px;
     height: 150px;
@@ -20,9 +20,10 @@ section {
 footer {
     margin-top: 0;
     color: $colour-white;
-    font-family: "Raleway script=all rev=1";
-    font-weight: 200;
-    font-size: 16px;
+    font-family:  "Shrikhand";
+    //font-style:  oblique;
+    font-size: 20px;
+    font-weight: 500;
     height: 100%;
     width: 100%;  
 }
@@ -33,23 +34,23 @@ div {
 }
 
 h1 {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Shrikhand';
     font-weight: 900;
     font-size: 5rem;
     font-style: italic;
 }
 
 textarea {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto';
     font-weight: 100;
     font-size: 2rem;
 }
 
 button {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto';
     font-weight: 900;
     font-style: italic;
-    font-size: 0.65rem;
+    font-size: .75rem;
     
 }
 
@@ -57,14 +58,14 @@ ul {
     margin-top: 2%;
     display: block;
     flex-direction: column;
-    font-weight: 200;
-    font-style: normal;
-    font-size: 12px;
     padding: 0;
     height: 100%;
     list-style-type: none;
     margin-left: 5%;
     justify-content: space-around;
+    font-family: 'Roboto';
+    font-weight: 200;
+    font-size: 14px;
 
 }
 
@@ -78,16 +79,19 @@ a{
 
 h2{
     @include section-divs;
-    color: black;
+    font-size: 16px;
 }
 h3{
+    padding-top: 3%;
     @include section-divs;
-    font-weight: normal;
-    color: black;
-  
+    color:whitesmoke;
+    font-family: "Shrikhand";
+    font-size: 20px;
+    font-weight: 100;
 }
 
 p {
+    font-family: 'Roboto';
     display: inline;
 
 }
@@ -101,22 +105,20 @@ figure {
     display: flex;
     flex-direction: column;
     text-align: center;
-    font-style: italic;
     font-size: smaller;
     position: relative;
     bottom: 10%;
     text-indent: 0;
     margin: 0 0 0 0;
     width: 96%;
-    height: 90%;
+    height: 100%;
 }
 
   figcaption {
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    background-color: $colour-white;
-    height: 25%;
+    background-color: white;
+    height: 35%;
     width: 100%;
     text-align: left;
   }
-  
