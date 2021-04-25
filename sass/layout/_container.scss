@@ -1,6 +1,76 @@
+.loading__container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    overflow: hidden;
+    z-index: 5;
+	top:0;
+    &__ball {
+        width: 20px;
+        height: 20px;
+        margin: 20% 50% 0% 50%;
+        border-radius: 50px;
+        //display: none;
+        animation: loading .6s ease-in-out 5 alternate;
+        animation-delay: 0s;
+        &:nth-child(1) {
+            background: $colour-primary;
+            animation-delay: 0.2s;
+        }
+
+        &:nth-child(2) {
+            background: $colour-primary;
+            animation-delay: 0.4s;
+        }
+
+        &:nth-child(3) {
+            background: $colour-primary;
+            animation-delay: 0.6s;
+        }
+
+        &:nth-child(4) {
+            background: $colour-primary;
+            animation-delay: 0.2s;
+        }
+
+        &:nth-child(5) {
+            background: $colour-primary;
+            animation-delay: 0.4s;
+        }
+
+        &:nth-child(6) {
+            background: $colour-primary;
+            animation-delay: 0.6s;
+        }
+
+        &:nth-child(7) {
+            background: $colour-primary;
+            animation-delay: 0.2s;
+        }
+        &:nth-child(8) {
+            animation-delay: 0s;
+        }
+    }
+}
+
+
+@keyframes loading {
+	0% {
+		transform: translateX(-15px);
+	}
+	50% {
+		transform: translateX(15px);
+	}
+	100% {
+		transform: translateX(-15px);
+	}
+}
+
     .container {
     @include flex(space-around,column,unset);
     height: 100%;
+    font-family: 'Roboto';
     &__container_big {
    
         @include section-divs;
@@ -54,16 +124,48 @@
                 height: 10%;
                 width: 16%; 
             }
+
             
             
         
-            }
+    }
+
     &__container_menu2 {
                 margin-left: 0;
                 height: 100%;
-            }
-
     }
+
+    
+    #menu4{
+        animation: 1s ease-out 1s both menus;
+        //animation-delay: .6s 
+    }
+    #menu3{
+        animation: 1s ease-out 1s both menus;
+        //animation-delay: .4s 
+    }
+    #menu2{
+        animation: 1s ease-out 1s both menus;
+        //animation-delay: .2s 
+    }
+    #menu1{
+        animation: 1s ease-out 1s both menus;
+        //animation-delay: .2s 
+    }
+}
+@keyframes menus {
+    0% {
+       
+        opacity: 0;
+      transform: scale(0);
+    }
+    100% {
+        opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+
     .container_restaurant {
         @include flex(space-around,column,unset);
         height: 218px;
@@ -71,48 +173,79 @@
 
     .content2 {
         @include flex(space-around,column,unset);
-        border-top-right-radius: 25px;
-        border-top-left-radius: 25px;
         position: relative;
         justify-content:unset; 
-        height: 1280px;
+        height: 1062px;
         bottom: 2%; 
         background-color:$colour-gray-light ;
+        font-family: "Roboto";
+        border-top-right-radius: 20px;
+        border-top-left-radius: 20px;
         &__title {
-            @include flex(space-around,row,unset);
+            @include flex(space-between,row,unset);
             height: 54px;
             &__heading{
-                @include flex(center,row,center);
-                padding-left: 5%;
-                margin: 5% 0 0 5%;
+                @include flex(left,column,left);
+                text-align: left;
+                padding-left: 7%;
+                margin: 0% 0 0 0%;
                 color: black;
-                width: 80%;
+                width: 70%;
+                font-size: 22px;
+                font-family: "Shrikhand";
+                font-weight: 500;
+                
             }
             &__heart{
+                z-index: 1;
+                color:transparent;
                 @include hearimg;
-                justify-content:center;
-                align-content: center;
-                text-align: center;
-                margin: 6.5% 0 0 5%;
-                color: black;
-                width: 20%;
+                justify-content:left;
+                align-content: left;
+                text-align: left;
+                margin: 4% 20% 0 0%;
+                width: 5%;
+                
+            }
+            &__heart1{
+                z-index: 2;
+                @include hearimg;
+                justify-content:left;
+                align-content: left;
+                text-align: left;
+                margin: 4% 20% 0 0%;
+                color:  black;
+                width: 5%;
+                &:hover + .content2__title__heart{
+                    z-index: 2;
+                    color: $colour-primary;
+                   
+                    //background: linear-gradient(to top,$colour-primary 0%, $colour-secondary 100%);
+                
+                    //content:url("../images/icons/heart-outline2.svg");
+                }
                 
             }
     
         }
         &__category {
-            @include flex(space-between,column,center);
+            @include flex(unset,column,center);
             width: 100%;
-            height: 356px;
+            height: 316px;
             //overflow: hidden;
             //transition: all 450ms;
             &__heading{
-                color: black;
+                font-family: "Roboto", sans-serif;
+                //color: lighten($colour-black, 20%);
+                font-weight: 100;
+                opacity: 1;
                 width: 90%;
                 height: 34px;
+                margin-bottom: 1%;
             }
             &__heading2{
-                display: flex;   
+                display: flex; 
+                overflow: hidden;  
                 flex-direction: column;   
                 border-top-right-radius: 10px;
                 border-bottom-right-radius: 10px;
@@ -120,44 +253,49 @@
                 border-bottom-left-radius: 10px;
                 color: black;
                 width: 90%;
-                height: 322px;
-                margin-bottom: 5%;
+                height: 316px;
                 
-                @for $i from 1 through 3 {
-                    &--#{$i}{
-                    transform-origin: top center;
-                    //animation: menus-animation 5000ms ease-in-out forwards;
-                    animation: menus-animation 500ms ($i * 1000ms) ease-in-out forwards;
-                    }
-
-                }
-            
-                animation: .45s ease-out 0s 1 slideOnTopFromBottom;
+                animation: 1s ease-out 1s both slideOnTopFromBottom;
                 //animation-direction: normal;
+                &:nth-child(6){
+                    animation-delay: 1s 
+                }
+                &:nth-child(5){
+                    animation-delay: .8s 
+                }
                 &:nth-child(4){
                     animation-delay: .6s 
                 }
                 &:nth-child(3){
-                    animation-delay: .55s 
+                    animation-delay: .4s 
                 }
                 &:nth-child(2){
-                    animation-delay: .5s 
+                    animation-delay: .2s 
                 }
-
-                /*transform-origin: center bottom;
-                animation: FadeIn 1s ease-in-out forwards;
-            //animation: FadeIn 1s linear;
-                animation-fill-mode: forwards;
-                transition : transform 0.5s ease;
-                &:nth-child(1){
-                    animation-delay: .25s 
-                }
-                &:nth-child(2){
-                    animation-delay: 0.5s 
-                }
-                &:nth-child(3){
-                    animation-delay: 1s 
-                }*/
+            }
+            &__heading3{
+                display: flex; 
+                flex-direction: column;
+                align-content: center;
+                align-items: center;  
+                padding-top: 5%; 
+                color: black;
+                width: 100%;
+                height: 40px;
+            }
+            &__heading4{
+                content: '        ';
+                position: relative;
+                border-color: turquoise;
+                border-bottom: 1px solid rgb(60, 9, 9);
+               align-self: flex-start;
+               margin-left: 7.5%;
+              border-radius: unset;
+              border-color:$colour-tertiary;
+              height: 10px;
+              width: 10%;
+              background-color: $colour-tertiary;
+              margin-bottom: 5%;
             }
             &__heart{
                 @include hearimg;
@@ -165,96 +303,21 @@
                 width: 20%;
                 
             }
-            /*transform-origin: top center;
-            animation: FadeIn 1s ease-in-out forwards;
-                    
-            //animation: FadeIn 1s linear;
-                animation-fill-mode: both;
-                &:nth-child(1){
-                    animation-delay: .5s 
-                }
-                &:nth-child(2){
-                    animation-delay: 1s 
-                }
-                &:nth-child(3){
-                    animation-delay: 1.5s 
-                }
-
-            
-                */
-    
         }
     }
 
     @keyframes slideOnTopFromBottom {
         0% {
+           
             opacity: 0;
           transform: translateY(100%);
         }
-        25% {
-            opacity: .25;
-            transform: translateY(75%);
-          }
-
-        50% {
-            opacity: .5;
-            transform: translateY(50%);
-          }
-        75% {
-            opacity: .75;
-          transform: translateY(25%);
-        }
         100% {
             opacity: 1;
           transform: translateY(1);
         }
       }
-
-    @keyframes FadeIn { 
-        0% {
-          opacity: 0;
-          transform: translateY(.1);
-        }
       
-        85% {
-          opacity: 0.8;
-          transform: translateY(.85);
-        }
-        100% {
-            opacity: 1;
-          transform: translateY(1);
-        }
-      }
-
-    /*@keyframes menus-animation{
-        0% {
-            opacity: 0;
-            transform: translateY(0);
-        }
-        20% {
-            opacity: 0.3;
-            transform: translateY(0.2);
-        }
-        50% {
-            opacity: 0.5;
-            transform: translateY(0.5);
-        }
-        80% {
-            opacity: 0.8;
-            transform: translateY(0.8); 
-        }
-        /*85%,100% {
-            opacity: 1;
-        }
-        
-        100% {
-            opacity: 1;
-            transform: translateY(1);
-        }
-    }*/
-    
-    
-
 
     .bottom {
         bottom:unset;
@@ -265,11 +328,7 @@
     .width {
         width: 100%;
     }
-    .height {
-        height: 100%;
     
-    
-    }
     
     
     .restaurant1 {
@@ -323,14 +382,28 @@
     }
     .uldiv {
         font-weight: normal;
+        line-height: 1.25;
+        font-size: 14px;
         &__ulli {
             color: black;
-            font-family: "Raleway script=all rev=1";
-            font-weight: bold;
-            font-size: 12px;
+            font-family:  "Roboto";
+            font-weight: 900;
+            //font-weight: bold;
+            
 
         }
-        
+        &__ulli2 {
+            font-family:  "Roboto";
+            color: lighten($colour-black, 35%);
+        }
+         
+      }
+
+      .footer_name{
+        font-weight: 100;
+        color:whitesmoke;
+
+
       }
       .clean_borders {
 
@@ -339,6 +412,18 @@
     
         }
        
-
-
+        .clean_link{
+            color:unset;
+            font-weight:unset;
+            text-decoration: none;
+        }
+        .padding_right{
+            padding-right: 33px;
+        }
+        .padding_right2{
+            padding-right: 20px;
+        }
+        .padding_right3{
+            padding-right: 22px;
+        }
     

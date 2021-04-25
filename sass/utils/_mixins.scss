@@ -39,20 +39,38 @@
         z-index: 1;
 }
 
-@mixin btn {
-    width: 50%;
-    height: 22%;
+@mixin btn ($width,$height) {
+    width: $width;
+    height: $height;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     border-style: none;
     color: $colour-white;
-    background: $colour-rose;
+    background: linear-gradient(to top,$colour-primary 0%, $colour-secondary 100%);
+    transition: all 400ms ease-in-out;
     &:hover{
-        background: darken($colour-rose, 10%);
-        color: $colour-accent;
+        background: linear-gradient(to top,lighten($colour-primary, 5%) 0%, lighten($colour-secondary, 5%) 100%);
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.75);
     }
+    &--full-width {
+        width: 40%;
+        margin: 0 auto;
+    }
+}
+@mixin btn_full_menu($colour,$height,$width) {
+    width: $width;
+    height: $height;
+    text-align: left;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-style: none;
+    color: $colour-black;
+    background: $colour;
+    transition: all 400ms ease-in-out;
     &--full-width {
         width: 40%;
         margin: 0 auto;
@@ -70,8 +88,17 @@
     border-style: none;
     color: $colour-black;
     background: $colour;
+    transition: all 400ms ease-in-out;
+    i {
+        transition: all 0.7s ease-in-out;
+    }
     &:hover{
+        background-color: #f5edff;
+		box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
         background: darken($colour-menu-buttom, 1%);
+        i {
+			color: $colour-number;
+		}
         
     
     }
@@ -87,12 +114,10 @@
 @mixin hearimg {
     margin: 3% 10% 0 0;
     display: block;
-    float: right;
-    @include small-images();
-    content:url("../images/icons/heart-outline.svg");
-    &:hover{
-        content:url("../images/icons/heart-outline2.svg");
-    }
+    position: absolute;
+    left: 85%;
+    //@include small-images();
+    //content:url("../images/icons/heart-outline.svg");
    
     &--full-width {
         width: 40%;

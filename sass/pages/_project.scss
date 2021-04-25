@@ -36,7 +36,7 @@
         }
     }
     &__btn {
-        @include btn;
+        @include btn(100%,100%);
         grid-area: btn;
     }
 }

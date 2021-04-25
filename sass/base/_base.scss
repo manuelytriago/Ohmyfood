@@ -5,16 +5,14 @@
     padding: 0;
     box-sizing: inherit;
 }
-button.btn::after{
+div.loading-container__loading::after{
+    box-sizing: unset;
+}
+button.explore_btn::after{
     content: 'Explore our restaurants';
   
 }
-button.btn2::after{
+button.order_btn2::after{
     content: 'Order';
   
-}
-
-body {
-    box-sizing: border-box;
-    background: $colour-secondary;
 }
