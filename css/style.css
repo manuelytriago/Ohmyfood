@@ -761,7 +761,7 @@ figcaption {
   display: flex;
   flex-direction: column;
   justify-content: left;
-  align-items: left;
+  align-items: flex-start;
   text-align: left;
   padding-left: 7%;
   margin: 0% 0 0 0%;
@@ -779,7 +779,7 @@ figcaption {
   position: absolute;
   left: 85%;
   justify-content: left;
-  align-content: left;
+  align-content: flex-start;
   text-align: left;
   margin: 4% 20% 0 0%;
   width: 5%;
@@ -795,7 +795,7 @@ figcaption {
   position: absolute;
   left: 85%;
   justify-content: left;
-  align-content: left;
+  align-content: flex-start;
   text-align: left;
   margin: 4% 20% 0 0%;
   color: black;
@@ -1008,7 +1008,6 @@ figcaption {
   width: 0%;
   height: 0%;
   color: transparent;
-  size: 0;
   text-size-adjust: 0;
 }
 
@@ -1287,6 +1286,7 @@ figcaption {
   }
   .btn_menu2__price_text {
     padding-top: unset;
+    width: 600px;
   }
 
   .header {
@@ -1305,7 +1305,7 @@ figcaption {
     display: flex;
     flex-direction: column;
     justify-content: left;
-    align-items: left;
+    align-items: flex-start;
     text-align: center;
     padding-left: 7%;
     margin: 0% 0 0 0%;
