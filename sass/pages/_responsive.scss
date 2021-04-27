@@ -60,8 +60,12 @@
         }
 
     }
+    .header {
+        margin-top: 1%;
+    }
 }
 @include media-lg {
+ 
     .content2 {
         &__title {
             @include flex(space-between,row,unset);
@@ -126,7 +130,7 @@
     
     }
     .header {
-        margin-top: 0%; 
+        margin-top: 0.25%; 
         &__logo {
            
             width: 20%;
