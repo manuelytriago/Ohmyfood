@@ -66,6 +66,20 @@
     }
 }
 @include media-lg {
+    
+
+    .loading__container {
+        &__ball {
+            width: 20px;
+            height: 20px;
+            margin: 5% 5% 2.5% 50%;
+            border-radius: 50px;
+            //display: none;
+        }
+
+
+
+    }
     .content2 {
         &__title {
             @include flex(space-between,row,unset);

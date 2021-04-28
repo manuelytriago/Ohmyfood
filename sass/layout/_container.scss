@@ -4,9 +4,11 @@
     height: 100%;
     background: #fff;
     overflow: hidden;
-    z-index: 5;
+    z-index: -1;
 	top:0;
+    animation: loading_page 4s ease-in-out;
     &__ball {
+        z-index: 0;
         width: 20px;
         height: 20px;
         margin: 20% 50% 0% 50%;
@@ -57,13 +59,41 @@
 
 @keyframes loading {
 	0% {
+        z-index: 5;
+		transform: translateX(-15px);
+	}
+    25% {
+        z-index: 5;
 		transform: translateX(-15px);
 	}
 	50% {
+        z-index: 5;
 		transform: translateX(15px);
 	}
-	100% {
+    75% {
+        z-index: 5;
 		transform: translateX(-15px);
+	}
+	100% {
+        z-index: 0;
+		transform: translateX(-15px);
+	}
+}
+@keyframes loading_page {
+	0% {
+        z-index: 5;
+	}
+    25% {
+        z-index: 5;
+	}
+	50% {
+        z-index: 5;
+	}
+    75% {
+        z-index: 5;
+	}
+	100% {
+        z-index: 0;
 	}
 }
 
@@ -108,7 +138,8 @@
                 
             }
             &__new_rest2 {
-                @include new-buttom ;
+                @include new-buttom ;  
+                z-index: 0;
                 border-radius: 50%;
                 right: 2%;
                 top: 44%; 
