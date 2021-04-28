@@ -25,7 +25,6 @@ body {
   font-weight: 200;
   font-size: 16px;
   height: 100%;
-  z-index: 1;
 }
 
 section {
@@ -95,6 +94,7 @@ a {
 h2 {
   margin: 0 0 0 5%;
   font-size: 16px;
+  position: static;
 }
 
 h3 {
@@ -409,6 +409,7 @@ figcaption {
   height: 15%;
 }
 .header__logo {
+  z-index: 0;
   display: flex;
   flex-direction: row;
   font-size: 7rem;
@@ -580,7 +581,7 @@ figcaption {
   overflow: hidden;
   z-index: -1;
   top: 0;
-  animation: loading_page 4s ease-in-out;
+  animation: loading_page 2.98s ease-in;
 }
 .loading__container__ball {
   z-index: 0;
@@ -588,39 +589,38 @@ figcaption {
   height: 20px;
   margin: 20% 50% 0% 50%;
   border-radius: 50px;
-  animation: loading 0.6s ease-in-out 5 alternate;
-  animation-delay: 0s;
+  animation: loading 0.3s ease-in 9.3 alternate;
 }
 .loading__container__ball:nth-child(1) {
   background: #9356DC;
-  animation-delay: 0.2s;
+  animation-delay: 0.1s;
 }
 .loading__container__ball:nth-child(2) {
   background: #9356DC;
-  animation-delay: 0.4s;
+  animation-delay: 0.12s;
 }
 .loading__container__ball:nth-child(3) {
   background: #9356DC;
-  animation-delay: 0.6s;
+  animation-delay: 0.15s;
 }
 .loading__container__ball:nth-child(4) {
   background: #9356DC;
-  animation-delay: 0.2s;
+  animation-delay: 0.12s;
 }
 .loading__container__ball:nth-child(5) {
   background: #9356DC;
-  animation-delay: 0.4s;
+  animation-delay: 0.1s;
 }
 .loading__container__ball:nth-child(6) {
   background: #9356DC;
-  animation-delay: 0.6s;
+  animation-delay: 0.12s;
 }
 .loading__container__ball:nth-child(7) {
   background: #9356DC;
-  animation-delay: 0.2s;
+  animation-delay: 0.15s;
 }
 .loading__container__ball:nth-child(8) {
-  animation-delay: 0s;
+  animation-delay: 0.12s;
 }
 
 @keyframes loading {
@@ -656,6 +656,15 @@ figcaption {
     z-index: 5;
   }
   75% {
+    z-index: 5;
+  }
+  85% {
+    z-index: 5;
+  }
+  95% {
+    z-index: 5;
+  }
+  99% {
     z-index: 5;
   }
   100% {
@@ -711,7 +720,6 @@ figcaption {
   align-items: center;
   font-size: 10px;
   position: relative;
-  z-index: 0;
   border-radius: 50%;
   right: 2%;
   top: 44%;
@@ -735,16 +743,16 @@ figcaption {
   height: 100%;
 }
 .container #menu4 {
-  animation: 1s ease-out 1s both menus;
+  animation: 3.1s ease-out 1.25s both menus;
 }
 .container #menu3 {
-  animation: 1s ease-out 1s both menus;
+  animation: 3.1s ease-out 1.25s both menus;
 }
 .container #menu2 {
-  animation: 1s ease-out 1s both menus;
+  animation: 3.1s ease-out 1.25s both menus;
 }
 .container #menu1 {
-  animation: 1s ease-out 1s both menus;
+  animation: 3.1s ease-out 1.25s both menus;
 }
 
 @keyframes menus {
@@ -801,7 +809,7 @@ figcaption {
   font-weight: 500;
 }
 .content2__title__heart {
-  z-index: 1;
+  z-index: -1;
   color: transparent;
   margin: 3% 10% 0 0;
   display: block;
@@ -818,7 +826,7 @@ figcaption {
   margin: 0 auto;
 }
 .content2__title__heart1 {
-  z-index: 2;
+  z-index: 0;
   margin: 3% 10% 0 0;
   display: block;
   position: absolute;
@@ -1353,7 +1361,6 @@ figcaption {
     padding-top: 0.25%;
   }
   .content2__title__heart {
-    z-index: 1;
     margin: 0% 20% 0 0%;
     padding-top: 0.25%;
   }
