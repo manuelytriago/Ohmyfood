@@ -25,6 +25,7 @@ body {
   font-weight: 200;
   font-size: 16px;
   height: 100%;
+  z-index: 1;
 }
 
 section {
@@ -577,10 +578,12 @@ figcaption {
   height: 100%;
   background: #fff;
   overflow: hidden;
-  z-index: 5;
+  z-index: -1;
   top: 0;
+  animation: loading_page 4s ease-in-out;
 }
 .loading__container__ball {
+  z-index: 0;
   width: 20px;
   height: 20px;
   margin: 20% 50% 0% 50%;
@@ -622,13 +625,41 @@ figcaption {
 
 @keyframes loading {
   0% {
+    z-index: 5;
+    transform: translateX(-15px);
+  }
+  25% {
+    z-index: 5;
     transform: translateX(-15px);
   }
   50% {
+    z-index: 5;
     transform: translateX(15px);
   }
-  100% {
+  75% {
+    z-index: 5;
     transform: translateX(-15px);
+  }
+  100% {
+    z-index: 0;
+    transform: translateX(-15px);
+  }
+}
+@keyframes loading_page {
+  0% {
+    z-index: 5;
+  }
+  25% {
+    z-index: 5;
+  }
+  50% {
+    z-index: 5;
+  }
+  75% {
+    z-index: 5;
+  }
+  100% {
+    z-index: 0;
   }
 }
 .container {
@@ -662,7 +693,6 @@ figcaption {
   align-items: center;
   font-size: 10px;
   position: relative;
-  z-index: 1;
   border-top-left-radius: 2px;
   border-bottom-left-radius: 2px;
   border-top-right-radius: 2px;
@@ -681,7 +711,7 @@ figcaption {
   align-items: center;
   font-size: 10px;
   position: relative;
-  z-index: 1;
+  z-index: 0;
   border-radius: 50%;
   right: 2%;
   top: 44%;
@@ -697,7 +727,6 @@ figcaption {
   align-items: center;
   font-size: 10px;
   position: relative;
-  z-index: 1;
   height: 10%;
   width: 16%;
 }
@@ -1294,6 +1323,13 @@ figcaption {
   }
 }
 @media screen and (min-width: 1024px) {
+  .loading__container__ball {
+    width: 20px;
+    height: 20px;
+    margin: 5% 5% 2.5% 50%;
+    border-radius: 50px;
+  }
+
   .content2__title {
     display: flex;
     flex-direction: row;
