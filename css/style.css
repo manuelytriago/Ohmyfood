@@ -1277,6 +1277,25 @@ figcaption {
   margin: 0 auto;
 }
 
+@media screen and (max-width: 320px) {
+  .content2__title__heading {
+    font-size: 18px;
+  }
+
+  .btn_menu2__menu_title {
+    width: 168px;
+  }
+  .btn_menu2__secondary_text {
+    width: 168px;
+  }
+  .btn_menu2__price_text {
+    width: 48px;
+  }
+
+  section {
+    font-size: 12px;
+  }
+}
 @media screen and (min-width: 768px) {
   .content2__category {
     height: 316px;

@@ -1,3 +1,33 @@
+@include media-sm {
+    .content2 {
+        &__title{
+            &__heading{
+                font-size: 18px;
+            }
+        }
+
+    }
+    .btn_menu2 {
+        &__menu_title{
+            width: 168px;
+          }
+          &__secondary_text{
+            width: 168px;
+      
+          }
+          &__price_text{
+            width: 48px;
+            
+        }
+
+    }
+
+    section {
+        font-size: 12px;
+    }
+
+}
+
 @include media-md {
     .content2 {
         

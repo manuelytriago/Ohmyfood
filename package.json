@@ -4,7 +4,8 @@
   "description": "Project 3 OpenClassrooms",
   "main": "attribution.js",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss:./css/style.css"
+    "sass": "sass --watch ./sass/main.scss:./css/style.css",
+    "prefix": "postcss ./css/style.css --use autoprefixer -d ./css/prefixed/"
   },
   "repository": {
     "type": "git",
@@ -13,7 +14,11 @@
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/manuelytriago/Ohmyfood/issues"
+    "url": "https://github.com/manuelytriago/Ohmyfood/issues",
+    "browserslist": "last 4 versions"
   },
-  "homepage": "https://github.com/manuelytriago/Ohmyfood#readme"
+  "homepage": "https://github.com/manuelytriago/Ohmyfood#readme",
+  "dependencies": {
+    "autoprefixer": "^10.2.5"
+  }
 }
