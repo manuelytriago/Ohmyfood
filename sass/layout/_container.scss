@@ -288,23 +288,22 @@
                 color: black;
                 width: 90%;
                 height: 316px;
-                
-                animation: 1s ease-out 1s both slideOnTopFromBottom;
+                animation: 1s ease-out 3s both slideOnTopFromBottom;
                 //animation-direction: normal;
                 &:nth-child(6){
-                    animation-delay: 1s 
+                    animation-delay: 4s 
                 }
                 &:nth-child(5){
-                    animation-delay: .8s 
+                    animation-delay: 3.8s 
                 }
                 &:nth-child(4){
-                    animation-delay: .6s 
+                    animation-delay: 3.6s 
                 }
                 &:nth-child(3){
-                    animation-delay: .4s 
+                    animation-delay: 3.4s 
                 }
                 &:nth-child(2){
-                    animation-delay: .2s 
+                    animation-delay: 3.2s 
                 }
             }
             &__heading3{
