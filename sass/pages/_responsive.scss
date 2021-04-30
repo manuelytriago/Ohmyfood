@@ -1,3 +1,14 @@
+@include media-small{
+    .content2 {
+        &__title{
+            &__heading{
+                font-size: 18px;
+            }
+        }
+
+    }
+
+}
 @include media-sm {
     .content2 {
         &__title{
@@ -7,20 +18,7 @@
         }
 
     }
-    .btn_menu2 {
-        &__menu_title{
-            width: 168px;
-          }
-          &__secondary_text{
-            width: 168px;
-      
-          }
-          &__price_text{
-            width: 48px;
-            
-        }
-
-    }
+    
 
     section {
         font-size: 12px;
@@ -74,29 +72,14 @@
             }
         }
     }
-    .btn_menu2 {
-        &__menu_title{
-            width: 600px;
-            margin-top: 1%;
-          }
-          &__secondary_text{
-            padding-bottom: unset;
-            margin-left: 5% ;
-      
-          }
-          &__price_text{
-            padding-top: unset;
-            width: 600px;
-            
-        }
-
-    }
     .header {
         margin-top: 1%;
     }
 }
+
 @include media-lg {
     
+
 
     .loading__container {
         &__ball {

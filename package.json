@@ -13,9 +13,10 @@
   },
   "author": "",
   "license": "ISC",
+"browserslist": ["last 6 versions","ie >= 9",
+  "> 1%"],
   "bugs": {
-    "url": "https://github.com/manuelytriago/Ohmyfood/issues",
-    "browserslist": "last 4 versions"
+    "url": "https://github.com/manuelytriago/Ohmyfood/issues"
   },
   "homepage": "https://github.com/manuelytriago/Ohmyfood#readme",
   "dependencies": {

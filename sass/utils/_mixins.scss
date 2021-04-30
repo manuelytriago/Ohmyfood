@@ -129,8 +129,15 @@
     margin: 0 0 0 $margin-divs-left;
 
 }
+@mixin media-small {
+    @media screen and (max-width: $small-width){
+        @content;
+    } 
+    
+    
+}
 @mixin media-sm {
-    @media screen and (max-width: $small-phones-width){
+    @media screen and (min-width: $min_small-phones-width) and (max-width: $small-phones-width){
         @content;
     } 
     
