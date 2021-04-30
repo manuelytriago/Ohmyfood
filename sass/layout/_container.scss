@@ -13,7 +13,6 @@
         height: 20px;
         margin: 20% 50% 0% 50%;
         border-radius: 50px;
-        //display: none;
         animation: loading .3s ease-in 9.30 alternate;
         &:nth-child(1) {
             background: $colour-primary;
@@ -253,10 +252,6 @@
                 &:hover + .content2__title__heart{
                     z-index: 2;
                     color: $colour-primary;
-                   
-                    //background: linear-gradient(to top,$colour-primary 0%, $colour-secondary 100%);
-                
-                    //content:url("../images/icons/heart-outline2.svg");
                 }
                 
             }
@@ -266,11 +261,8 @@
             @include flex(unset,column,center);
             width: 100%;
             height: 316px;
-            //overflow: hidden;
-            //transition: all 450ms;
             &__heading{
                 font-family: "Roboto", sans-serif;
-                //color: lighten($colour-black, 20%);
                 font-weight: 100;
                 opacity: 1;
                 width: 90%;
@@ -289,7 +281,6 @@
                 width: 90%;
                 height: 316px;
                 animation: 1s ease-out 3s both slideOnTopFromBottom;
-                //animation-direction: normal;
                 &:nth-child(6){
                     animation-delay: 4s 
                 }
@@ -421,9 +412,6 @@
             color: black;
             font-family:  "Roboto";
             font-weight: 900;
-            //font-weight: bold;
-            
-
         }
         &__ulli2 {
             font-family:  "Roboto";

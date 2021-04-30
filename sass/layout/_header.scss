@@ -22,7 +22,6 @@ height: 240px;
         flex-direction: row;
         font-size: 7rem;
         color: $colour-secondary;
-        //@include heading-shadow($colour-white);
         margin: 0;
         width: 40%;
         height: 70%;
@@ -137,10 +136,6 @@ height: 240px;
     &:hover + .heart{
         z-index: 2;
         color: $colour-primary;
-       
-        //background: linear-gradient(to top,$colour-primary 0%, $colour-secondary 100%);
-    
-        //content:url("../images/icons/heart-outline2.svg");
     }
     &:active + .heart{
         color: $colour-primary;
