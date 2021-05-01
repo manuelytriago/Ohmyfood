@@ -13,8 +13,14 @@
   },
   "author": "",
   "license": "ISC",
-  "browserslist": ["last 6 versions","ie >= 9",
-  "> 1%"],
+  "browserslist": ["last 9 versions","ie >= 9","defaults",
+    "not IE 11",
+    "maintained node versions",
+    "since 2015",
+    "dead",
+  "> 1%",
+"current node"
+],
   "bugs": {
     "url": "https://github.com/manuelytriago/Ohmyfood/issues"
   },
