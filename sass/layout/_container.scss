@@ -81,21 +81,6 @@
 	0% {
         z-index: 5;
 	}
-    25% {
-        z-index: 5;
-	}
-	50% {
-        z-index: 5;
-	}
-    75% {
-        z-index: 5;
-	}
-    85% {
-        z-index: 5;
-	}
-	95% {
-        z-index: 5;
-	}
     99% {
         z-index: 5;
 	}
@@ -104,6 +89,11 @@
 	}
 }
 
+
+    .menu_options {
+        height: 300px;
+    }
+    
     .container {
     @include flex(space-around,column,unset);
     height: 100%;
