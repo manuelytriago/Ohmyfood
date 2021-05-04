@@ -108,6 +108,8 @@
 
     }
       &:hover {
+        background: linear-gradient (to top,$colour-white 20%, $colour-menu-buttom 100%);
+        box-shadow: 0 15px 15px -12px rgba(0, 0, 0, 0.75);
         .btn_menu2__first{
           width: 70%;
         }

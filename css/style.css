@@ -313,6 +313,10 @@ figcaption {
   height: 30px;
   transition: transform 0.5s ease-in-out;
 }
+.btn_menu2:hover {
+  background: linear-gradient to top, #ffffff 20%, #F3EEFE 100%;
+  box-shadow: 0 15px 15px -12px rgba(0, 0, 0, 0.75);
+}
 .btn_menu2:hover .btn_menu2__first {
   width: 70%;
 }
@@ -1303,8 +1307,8 @@ figcaption {
   .content2__title__heading {
     display: flex;
     flex-direction: column;
-    justify-content: left;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     padding-left: 7%;
     margin: 0% 0 0 0%;
