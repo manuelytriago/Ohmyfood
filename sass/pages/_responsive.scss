@@ -98,7 +98,7 @@
             @include flex(space-between,row,unset);
             height: 54px;
             &__heading{
-                @include flex(left,column,flex-start);
+                @include flex(center,column,center);
                 text-align: center;
                 padding-left: 7%;
                 margin: 0% 0 0 0%;
