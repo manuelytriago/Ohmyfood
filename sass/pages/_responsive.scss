@@ -7,6 +7,15 @@
         }
 
     }
+    .btn_menu2 {
+        &__first{
+            &__menu_title{
+                padding-top: 2%;
+            }
+        }
+
+
+    }
 
 }
 @include media-sm {
@@ -18,15 +27,23 @@
         }
 
     }
-    
-
-    section {
-        font-size: 12px;
-    }
 
 }
 
 @include media-md {
+
+    .btn_menu2 {
+        &__first{
+            &__menu_title{
+                padding-top: 1%;
+            }
+        }
+        &__price_text{
+            padding-top: 1%;
+        }
+
+
+    }
     .content2 {
         
         &__category {
@@ -78,7 +95,19 @@
 }
 
 @include media-lg {
-    
+
+    .btn_menu2 {
+        &__first{
+            &__menu_title{
+                padding-top: .75%;
+            }
+        }
+        &__price_text{
+            padding-top: .75%;
+        }
+
+
+    }
 
 
     .loading__container {

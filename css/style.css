@@ -255,7 +255,7 @@ figcaption {
 }
 .btn_menu2__first__menu_title {
   line-height: 1.4;
-  padding-top: 0.75%;
+  padding-top: 2%;
   padding-left: 2.5%;
   height: 20px;
   grid-area: title;
@@ -275,6 +275,7 @@ figcaption {
   overflow: hidden;
 }
 .btn_menu2__price_text {
+  padding-top: 2%;
   height: 100%;
   width: 12%;
   grid-area: price;
@@ -314,7 +315,7 @@ figcaption {
   transition: transform 0.5s ease-in-out;
 }
 .btn_menu2:hover {
-  background: linear-gradient to top, #ffffff 20%, #F3EEFE 100%;
+  background: linear-gradient(to top, #ffffff 20%, #F3EEFE 100%);
   box-shadow: 0 15px 15px -12px rgba(0, 0, 0, 0.75);
 }
 .btn_menu2:hover .btn_menu2__first {
@@ -607,21 +608,6 @@ figcaption {
   0% {
     z-index: 5;
   }
-  25% {
-    z-index: 5;
-  }
-  50% {
-    z-index: 5;
-  }
-  75% {
-    z-index: 5;
-  }
-  85% {
-    z-index: 5;
-  }
-  95% {
-    z-index: 5;
-  }
   99% {
     z-index: 5;
   }
@@ -629,6 +615,10 @@ figcaption {
     z-index: 0;
   }
 }
+.menu_options {
+  height: 300px;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -1239,17 +1229,24 @@ figcaption {
   .content2__title__heading {
     font-size: 18px;
   }
+
+  .btn_menu2__first__menu_title {
+    padding-top: 2%;
+  }
 }
 @media screen and (min-width: 321px) and (max-width: 361px) {
   .content2__title__heading {
     font-size: 18px;
   }
-
-  section {
-    font-size: 12px;
-  }
 }
 @media screen and (min-width: 768px) {
+  .btn_menu2__first__menu_title {
+    padding-top: 1%;
+  }
+  .btn_menu2__price_text {
+    padding-top: 1%;
+  }
+
   .content2__category {
     height: 316px;
   }
@@ -1290,6 +1287,13 @@ figcaption {
   }
 }
 @media screen and (min-width: 1024px) {
+  .btn_menu2__first__menu_title {
+    padding-top: 0.75%;
+  }
+  .btn_menu2__price_text {
+    padding-top: 0.75%;
+  }
+
   .loading__container__ball {
     width: 20px;
     height: 20px;
