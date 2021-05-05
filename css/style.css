@@ -1511,7 +1511,7 @@ figcaption {
   }
 
   ul {
-    margin-top: 2.5%;
+    margin-top: 0%;
     margin-left: 2%;
   }
 
@@ -1559,7 +1559,7 @@ figcaption {
     margin-top: 0.5%;
   }
   .container__container_big {
-    text-align: centers;
+    text-align: center;
     margin-top: 2%;
     margin-bottom: 1%;
     height: 3%;

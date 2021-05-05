@@ -218,13 +218,14 @@
     } 
 }
 @include media-desktop {
+
     .order_btn2 {
         @include btn(25%,90%)
       
       }
 
     ul {
-        margin-top: 2.5%;
+        margin-top: 0%;
         margin-left: 2%;
     }
 
@@ -272,7 +273,7 @@
         
            } 
         &__container_big {
-            text-align: centers;
+            text-align: center;
             margin-top: 2%;
             margin-bottom: 1%;
             height: 3%;  
