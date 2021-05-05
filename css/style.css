@@ -98,7 +98,7 @@ h2 {
 }
 
 h3 {
-  padding-top: 3%;
+  padding-top: 1%;
   margin: 0 0 0 5%;
   color: whitesmoke;
   font-family: "Shrikhand";
@@ -233,7 +233,7 @@ figcaption {
   position: relative;
   overflow: hidden;
   width: 100%;
-  height: 60px;
+  height: 80%;
   text-align: left;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -440,7 +440,7 @@ figcaption {
 }
 
 .menu_restaurant_height {
-  height: 1280px;
+  height: 980px;
 }
 
 .section_footer {
@@ -477,7 +477,7 @@ figcaption {
 }
 .heart1 {
   z-index: 2;
-  margin: 3% 10% 0 0;
+  margin: 2% 10% 0 0;
   display: block;
   position: absolute;
   left: 85%;
@@ -497,7 +497,7 @@ figcaption {
 .heart {
   z-index: 1;
   color: white;
-  margin: 3% 10% 0 0;
+  margin: 2% 10% 0 0;
   display: block;
   position: absolute;
   left: 85%;
@@ -728,7 +728,7 @@ figcaption {
   align-items: unset;
   position: relative;
   justify-content: unset;
-  height: 1062px;
+  height: 100%;
   bottom: 2%;
   background-color: #EAEAEA;
   font-family: "Roboto";
@@ -740,7 +740,7 @@ figcaption {
   flex-direction: row;
   justify-content: space-between;
   align-items: unset;
-  height: 54px;
+  height: 5%;
 }
 .content2__title__heading {
   display: flex;
@@ -759,14 +759,14 @@ figcaption {
 .content2__title__heart {
   z-index: -1;
   color: transparent;
-  margin: 3% 10% 0 0;
+  margin: 2% 10% 0 0;
   display: block;
   position: absolute;
   left: 85%;
   justify-content: left;
   align-content: flex-start;
   text-align: left;
-  margin: 4% 20% 0 0%;
+  margin: 1% 20% 0 0%;
   width: 5%;
 }
 .content2__title__heart--full-width {
@@ -775,14 +775,14 @@ figcaption {
 }
 .content2__title__heart1 {
   z-index: 0;
-  margin: 3% 10% 0 0;
+  margin: 2% 10% 0 0;
   display: block;
   position: absolute;
   left: 85%;
   justify-content: left;
   align-content: flex-start;
   text-align: left;
-  margin: 4% 20% 0 0%;
+  margin: 1% 20% 0 0%;
   color: black;
   width: 5%;
 }
@@ -800,14 +800,14 @@ figcaption {
   justify-content: unset;
   align-items: center;
   width: 100%;
-  height: 316px;
+  height: auto;
 }
 .content2__category__heading {
   font-family: "Roboto", sans-serif;
   font-weight: 100;
   opacity: 1;
   width: 90%;
-  height: 34px;
+  height: 8%;
   margin-bottom: 1%;
 }
 .content2__category__heading2 {
@@ -820,7 +820,7 @@ figcaption {
   border-bottom-left-radius: 10px;
   color: black;
   width: 90%;
-  height: 316px;
+  height: 100%;
   animation: 1s ease-out 3s both slideOnTopFromBottom;
 }
 .content2__category__heading2:nth-child(6) {
@@ -846,7 +846,7 @@ figcaption {
   padding-top: 5%;
   color: black;
   width: 100%;
-  height: 40px;
+  height: 3%;
 }
 .content2__category__heading4 {
   content: "        ";
@@ -860,10 +860,10 @@ figcaption {
   height: 10px;
   width: 10%;
   background-color: #99E2D0;
-  margin-bottom: 5%;
+  margin-bottom: 3%;
 }
 .content2__category__heart {
-  margin: 3% 10% 0 0;
+  margin: 2% 10% 0 0;
   display: block;
   position: absolute;
   left: 85%;
@@ -1248,7 +1248,7 @@ figcaption {
   }
 
   .content2__category {
-    height: 316px;
+    height: auto;
   }
   .content2__category__heading3 {
     padding-top: unset;
@@ -1288,10 +1288,10 @@ figcaption {
 }
 @media screen and (min-width: 1024px) {
   .btn_menu2__first__menu_title {
-    padding-top: 0.75%;
+    padding-top: 0.5%;
   }
   .btn_menu2__price_text {
-    padding-top: 0.75%;
+    padding-top: 0.5%;
   }
 
   .loading__container__ball {
@@ -1306,7 +1306,7 @@ figcaption {
     flex-direction: row;
     justify-content: space-between;
     align-items: unset;
-    height: 54px;
+    height: 5%;
   }
   .content2__title__heading {
     display: flex;
@@ -1325,14 +1325,14 @@ figcaption {
   }
   .content2__title__heart {
     margin: 0% 20% 0 0%;
-    padding-top: 0.25%;
+    padding-top: 1%;
   }
   .content2__title__heart1 {
     margin: 0% 20% 0 0%;
-    padding-top: 0.25%;
+    padding-top: 1%;
   }
   .content2__category {
-    height: 316px;
+    height: auto;
   }
   .content2__category__heading {
     text-align: center;
@@ -1341,7 +1341,7 @@ figcaption {
   .content2__category__heading3 {
     padding-top: unset;
     width: 100%;
-    height: 30px;
+    height: 3%;
   }
   .content2__category__heading4 {
     align-self: unset;
@@ -1359,7 +1359,7 @@ figcaption {
   }
 
   .section_restaurants {
-    height: 1280px;
+    height: 980px;
   }
 
   .header {
