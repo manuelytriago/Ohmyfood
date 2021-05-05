@@ -148,6 +148,11 @@
     
 }
 @mixin media-lg {
+    @media screen and (min-width: $desktop-width-1) and (max-width: $desktop-width) {
+        @content;
+    }
+}
+@mixin media-desktop {
     @media screen and (min-width: $desktop-width){
         @content;
     }
