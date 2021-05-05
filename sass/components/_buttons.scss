@@ -35,7 +35,7 @@
   display: flex;
   position: relative;
   overflow:hidden;
-  @include btn_full_menu($colour-white,60px,100%);
+  @include btn_full_menu($colour-white,80%,100%);
   animation: fadein 1.5s ease-in-out both;
   &__first{
     width: 88%;
