@@ -498,6 +498,21 @@
         }
          
       }
+      .uldiv_rest {
+        font-weight: normal;
+        line-height: 1.25;
+        font-size: 14px;
+        &__ulli {
+            color: black;
+            font-family:  "Roboto";
+            font-weight: 900;
+        }
+        &__ulli2 {
+            font-family:  "Roboto";
+            color: lighten($colour-black, 35%);
+        }
+         
+      }
 
       .footer_name{
         font-weight: 100;
